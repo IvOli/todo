@@ -1,0 +1,16 @@
+*{
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  height: 92vh;
+  width: 100vw;
+}
+
+@media (max-width: 900px) {
+  .container{
+    flex-direction: column;
+  }
+}
