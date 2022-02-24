@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { TodosContext } from './context/TodosContext'
 import { useForm } from './hooks/useForm'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './_modal.scss'
 import './_form.scss'
 
@@ -19,6 +21,9 @@ export const ModalTodo = ({todoId, topic, setEdit}) => {
         newTodos[todoIndex].task = editTask
         setTodos(newTodos);
         setEdit(false)
+        toast.success("The task was successfully edited");
+    }else{
+      toast.error("Please fill the following form");
     }
         
    }
@@ -49,6 +54,7 @@ export const ModalTodo = ({todoId, topic, setEdit}) => {
                     <button className='modal__button--confirm'>Confirm</button>
                 </div>
         </div>
+        <ToastContainer />
       </form>
     
   )
