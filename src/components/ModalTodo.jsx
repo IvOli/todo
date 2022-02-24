@@ -28,6 +28,7 @@ export const ModalTodo = ({todoId, topic, setEdit}) => {
         <div className='modal__container'>
                 <label>Are you sure to edit?</label>
                 <input 
+                  className='form__input modal__input' 
                   type='text' 
                   name='editTopic' 
                   placeholder={`you editing ${topic}`}
@@ -35,7 +36,8 @@ export const ModalTodo = ({todoId, topic, setEdit}) => {
                   onChange={handleInputChange} 
                   maxLength='50'
                 />
-                <textarea  
+                <textarea 
+                  className='form__textarea modal__textarea' 
                   name='editTask'
                   value={editTask} 
                   placeholder='Edit content...' 

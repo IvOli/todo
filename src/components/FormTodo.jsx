@@ -34,6 +34,7 @@ export const FormTodo = () => {
         <form className='form__todo' onSubmit={writeTask}>
             <div className='form__contador'>{topic.length}/50</div>
             <input 
+              className='form__input'
               type='text' 
               name='topic' 
               placeholder='your task topic' 
@@ -42,14 +43,15 @@ export const FormTodo = () => {
               maxLength='50'
             />
             <div className='form__contador'>{task.length}/75</div>
-            <textarea  
+            <textarea
+              className='form__textarea'
               name='task'
               value={task} 
               placeholder='more info about task' 
               maxLength='75' 
               onChange={handleInputChange}
             />
-            <button>Create New Task</button>
+            <button className='form__button'>Create New Task</button>
             <ToastContainer />
         </form>
     </div>
